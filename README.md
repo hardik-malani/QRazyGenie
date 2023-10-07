@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>QRazyGenie</h1>
+  <h1>QRazyGenie [ work-in-progress ]</h1>
   <p>
     <strong>Custom QR-Code Generator</strong>
   </p>
