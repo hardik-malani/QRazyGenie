@@ -53,6 +53,6 @@ The project should now be running on `http://localhost:5173`
 
 # Acknowledgement 
 
-We would like to acknowledge the following individuals and resources for their contributions and support:
+I would like to acknowledge the following individuals and resources for their contributions and support:
 
 - https://github.com/gcoro/react-qrcode-logo
