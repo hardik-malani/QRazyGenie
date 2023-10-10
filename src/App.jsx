@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <>
-      <div className="flex flex-col overflow-x-hidden">
+      <div className="flex flex-col overflow-x-hidden h-screen">
         <Navbar />
         <div className="flex flex-row">
           <Sidebar />
