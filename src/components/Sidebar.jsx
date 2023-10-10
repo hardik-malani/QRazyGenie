@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Sidebar() {
   return (
-    <div className='h-[46rem] w-[10em] bg-gray-400'>
+    <div className='h-[46rem] w-[10em] bg-gray-400 hidden md:block'>
         A
     </div>
   )
