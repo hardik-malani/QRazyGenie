@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Lemon'; /* The name you want to use for the font */
+    src: url('/Font/LemondropspersonaluseBold-9Yn02.otf') format('opentype'); /* Path to your font file */
+    /* You may specify other font properties here, such as font-weight and font-style */
+  }
+
+  .Lemon{
+    font-family: 'Lemon';
+  }
+
+@font-face {
+    font-family: 'Cheese'; /* The name you want to use for the font */
+    src: url('/Font/MouldyCheeseRegular-WyMWG.ttf') format('opentype'); /* Path to your font file */
+    /* You may specify other font properties here, such as font-weight and font-style */
+  }
+
+  .Cheese{
+    font-family: 'Cheese';
+  }
+
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary);
