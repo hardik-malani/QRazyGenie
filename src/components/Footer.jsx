@@ -8,15 +8,18 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { Heart } from "react-feather";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="bg-gray-800 flex flex-col py-3 relative top-[33vh] md:top-auto">
+    <div className="bg-gray-800 flex flex-col py-3 relative md:top-auto">
       <div className="p-5 h-auto lg:flex md:flex-row space-y-5 md:space-y-0">
         <div>
-          <p className="text-4xl bg-gradient-to-r from-primary to-danger bg-clip-text text-transparent Cheese">
+          <Link to="/">
+          <p className="text-4xl bg-gradient-to-r from-green-300 via-blue-400 to-purple-600 bg-clip-text text-transparent Cheese">
             QRazy-Genie
           </p>
+          </Link>
           <p className="text-white font-mono italic md:w-[60%]">
             Take the creative control to make QR codes that match your unique
             style and branding effortlessly
@@ -52,10 +55,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-[100%] flex justify-center text-[#ADFF45] font-mono md:text-[25px] mt-10">
-        <span>Made with Love&nbsp;</span>
-        <span> by Hardik&nbsp;</span>
-        <Heart color="red" className="md:mt-[3px] md:w-8 md:h-8"/>
+      <div className="w-[100%] flex justify-center font-mono md:text-[25px] mt-10">
+        <span className="text-[#ADFF45] hover:text-[#79c635]">Made with Love by Hardik&nbsp;</span>
+        <Heart className="md:mt-[3px] md:w-8 md:h-8 text-red-500 hover:text-red-800"/>
       </div>
     </div>
   );

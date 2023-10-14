@@ -1,22 +1,22 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import About from "./pages/About";
+
 
 function App() {
   return (
-    <>
-      <div className="flex flex-col overflow-x-hidden h-screen bg-gradient-to-r from-green-300 via-blue-400 to-purple-600">
-        <Navbar />
-        <div className="flex flex-row">
-          <Sidebar />
-          <div>
-            <Hero />
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </>
+    <div className="no-scroll">
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+      </Routes>
+      <Footer/>
+    </Router>
+    </div>
   );
 }
 
