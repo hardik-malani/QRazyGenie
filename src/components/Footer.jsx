@@ -2,9 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faInstagram,
   faGithub,
-  faDev,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { Heart } from "react-feather";
