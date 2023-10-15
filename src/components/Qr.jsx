@@ -9,7 +9,7 @@ export default function Qr() {
 
   return (
     <div>
-            <QRCode value="https://youtu.be/dQw4w9WgXcQ?si=aDCRi0NIUfiTJydW" bgColor={bgColorQr} quietZone={10} fgColor="green" logoImage={"/github.png"} logoWidth="90" logoOpacity="0.5" qrStyle="dots"/>
+            <QRCode value="https://youtu.be/dQw4w9WgXcQ?si=aDCRi0NIUfiTJydW" bgColor={bgColorQr} quietZone={10} fgColor="green" logoImage={"/github.png"} logoWidth="90" logoOpacity="0.4" qrStyle="square"/>
     </div>
   )
 }
