@@ -3,8 +3,6 @@ import Qr from "./Qr";
 
 export default function Hero() {
 
-  
-
   return (
     <>
       <div className="bg-gradient-to-r from-green-300 via-blue-400 to-purple-600 h-screen w-full flex flex-col justify-center items-center space-y-10">
