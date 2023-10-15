@@ -1,7 +1,11 @@
 import React from "react";
 import { FaCloudUploadAlt, FaBars, FaTimes, FaPalette, FaDownload } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 
 export default function Sidebar() {
+
+  const dispatch = useDispatch()
+
   return (
     <div className="h-[auto] w-[5em] p-3 space-y-5 bg-gray-400 hidden md:block rounded-e-xl">
 
