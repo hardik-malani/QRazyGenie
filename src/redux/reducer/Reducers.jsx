@@ -1,11 +1,20 @@
-import { createReducer } from "@reduxjs/toolkit";
+// Reducers.js
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    bgColorReducer:"#FFFFFF",
-}
+  inputValue: '',
+};
 
-export const bgColorReducer = createReducer(initialState,{
-        bgColorChange: (state, action ) => {
-            state.bgColor = action.payload;
+const inputSlice = createSlice({
+  name: 'inputValue',
+  initialState,
+  reducers: {
+    setInputValue: (state, action) => {
+      state.name = action.payload;
     },
-})
+  },
+});
+
+export default inputSlice.reducer;
+
+export const {setInputValue} = inputSlice.actions;

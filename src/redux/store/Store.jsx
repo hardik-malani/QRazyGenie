@@ -1,9 +1,9 @@
-import React from 'react';
+// Store.js
 import { configureStore } from '@reduxjs/toolkit';
-import { bgColorReducer } from '../reducer/Reducers';
+import inputReducer from '../reducer/Reducers'; // Import the correct reducer
 
 export const Store = configureStore({
-    reducer: {
-        bgColor: bgColorReducer,
-    },
+  reducer: {
+    linkValue: inputReducer,
+  },
 });

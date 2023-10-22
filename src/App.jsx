@@ -9,11 +9,11 @@ import { useEffect } from "react";
 
 function App() {
 
-  const {bgColorReducer} = useSelector(state => state.bgColor);
-
-  useEffect(() => {
-    console.log(bgColorReducer);
-  }, [bgColorReducer]);
+    const Store = useSelector((state) => state.linkValue);
+ 
+    // useEffect(() => {
+    //   console.log(Store)
+    // })
 
   return (
     <div className="no-scroll">

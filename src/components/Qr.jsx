@@ -1,10 +1,17 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef} from "react";
 import { QRCode } from "react-qrcode-logo";
 import html2canvas from "html2canvas";
+import { useDispatch,useSelector } from 'react-redux';
 
-export default function Qr() {
+export default function Qr({link}) {
   const qrRef = useRef(null);
   const bgColorQr = "white";
+  const Store = useSelector((state) => state.linkValue)
+
+  useEffect(()=>{
+    console.log(Store)
+  })
+
 
   const downloadQR = () => {
     if (qrRef.current) {
@@ -23,15 +30,16 @@ export default function Qr() {
   return (
     <div className="flex flex-col">
       <div ref={qrRef} className="w-auto self-center ">
+        <span></span>
       <QRCode
-        value="https://youtu.be/dQw4w9WgXcQ?si=aDCRi0NIUfiTJydW"
+        value={Store.name}
         bgColor={bgColorQr}
         quietZone={10}
         fgColor="green"
         logoImage="/github.png"
-        logoWidth="90"
+        logoWidth="100"
         logoOpacity="0.4"
-        qrStyle="square"
+        qrStyle="dots"
       />
       </div>
       <button
