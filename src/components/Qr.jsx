@@ -35,6 +35,7 @@ export default function Qr({link}) {
         value={Store.name}
         bgColor={bgColorQr}
         quietZone={10}
+        size={200}
         fgColor="green"
         logoImage="/github.png"
         logoWidth="100"
@@ -44,7 +45,7 @@ export default function Qr({link}) {
       </div>
       <button
         onClick={downloadQR}
-        className="w-48 px-4 py-2 bg-yellow-600 hover:bg-yellow-500 cursor-pointer rounded-xl font-mono hover:text-white mt-6"
+        className="w-48 px-4 py-2 self-center bg-yellow-600 hover:bg-yellow-500 cursor-pointer rounded-xl font-mono hover:text-white mt-6"
       >
         Download
       </button>

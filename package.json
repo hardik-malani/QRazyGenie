@@ -18,6 +18,8 @@
     "@reduxjs/toolkit": "^1.9.7",
     "html2canvas": "^1.4.1",
     "react": "^18.2.0",
+    "react-color-palette": "^7.1.0",
+    "react-color-pallete": "^1.0.1",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-icons": "^4.11.0",
