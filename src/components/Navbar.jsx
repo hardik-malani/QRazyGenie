@@ -7,14 +7,14 @@ export default function Navbar() {
       <span className="text-3xl Ninja bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent">
         qRazy-Genie
       </span>
-      <div className="hidden md:block">
+      <div className="hidden md:block text-blue-500">
         <Link to="/">
-          <span className="text-[18px] text-white mr-10 hover:text-gray-300 my-1">
+          <span className="text-[18px] mr-10 hover:text-gray-300 my-1">
             Home
           </span>
         </Link>
         <Link to="/about">
-          <span className="text-[18px] text-white mr-10 hover:text-gray-300 my-1">
+          <span className="text-[18px] mr-10 hover:text-gray-300 my-1">
             About
           </span>
         </Link>

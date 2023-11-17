@@ -19,13 +19,19 @@ export default function Sidebar() {
   const [open, setOpen] = useState(0);
   const [qrcolor, setQrColor] = useColor("#123123");
   const [bgcolor, setBgColor] = useColor("#123123");
+  
+  const [selectedShape, setSelectedShape] = useState('circle');
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
 
+  const handleShapeChange = (shape) => {
+    setSelectedShape(shape);
+  };
+
   return (
-    <Card className="h-[100vh] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block">
+    <Card className="h-[100vh] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block bg-black text-red-500 rounded-none">
       <div className="mb-2 p-4">
         <Typography variant="h5" color="blue-gray" className="text-3xl">
           Customize
@@ -157,7 +163,6 @@ export default function Sidebar() {
               onClick={() => handleOpen(4)}
               className="border-b-0 p-3"
             >
-              <ListItemPrefix></ListItemPrefix>
               <Typography
                 color="blue-gray"
                 className="mr-auto font-normal mt-auto"
@@ -166,6 +171,27 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
+              { open===4 && (<ListItemPrefix className="ml-5">
+                {/* Add the circle and square checkboxes */}
+                <label className="inline-flex items-center mr-5">
+                  <input
+                    type="checkbox"
+                    checked={selectedShape === 'circle'}
+                    onChange={() => handleShapeChange('circle')}
+                    className="h-5 w-5 "
+                  />
+                  <span className="ml-2 text-white">Circle</span>
+                </label>
+                <label className="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={selectedShape === 'square'}
+                    onChange={() => handleShapeChange('square')}
+                    className="h-5 w-5 text-white"
+                  />
+                  <span className="ml-2 text-white">Square</span>
+                </label>
+              </ListItemPrefix>)}
         </Accordion>
       </List>
     </Card>
