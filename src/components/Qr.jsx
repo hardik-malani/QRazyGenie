@@ -7,10 +7,10 @@ export default function Qr({link}) {
   const qrRef = useRef(null);
   const bgColorQr = "#000000";
   const input = useSelector((state) => state.linkValue)
-  const qrcolor = useSelector((state) => state.frcolor)
+  const qrcolor = useSelector((state) => state.frcolor.name?.hex || "#000000")
 
   useEffect(()=>{
-    console.log(qrcolor.name)
+    console.log(qrcolor)
 })
 
   const downloadQR = () => {
@@ -33,11 +33,11 @@ export default function Qr({link}) {
         <span></span>
       <QRCode
         value={input.name}
-        fgColor={qrcolor.name.hex}
+        fgColor={qrcolor}
         bgColor={bgColorQr}
         quietZone={10}
         size={200}
-        // logoImage="/github.png"
+        logoImage="/github.png"
         logoWidth="100"
         logoOpacity="0.4"
         qrStyle="dots"
