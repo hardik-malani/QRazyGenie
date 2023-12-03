@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import Qr from './Qr';
 import { FaGreaterThan } from 'react-icons/fa';
-import { setInputValue } from '../redux/reducer/Reducers';
+import { setInputValue } from '../redux/reducer/Input';
 
 export default function Hero({link}) {
   const [inputText, setInputText] = useState('');
   const dispatch = useDispatch();
-  const Store = useSelector((state) => state.linkValue)
+  // const Store = useSelector((state) => state.linkValue)
 
   const handleButtonClick = () => {
     dispatch(setInputValue(inputText));

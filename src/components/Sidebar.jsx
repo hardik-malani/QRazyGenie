@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import {
   Card,
   Typography,
@@ -13,6 +13,8 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
+import { setFrColor } from "../redux/reducer/QrColor";
+
 
 export default function Sidebar() {
   const dispatch = useDispatch();
@@ -29,6 +31,10 @@ export default function Sidebar() {
   const handleShapeChange = (shape) => {
     setSelectedShape(shape);
   };
+
+  useEffect(()=>{
+      dispatch(setFrColor(qrcolor))
+  })
 
   return (
     <Card className="h-[100vh] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block bg-black text-red-500 rounded-none">
@@ -54,7 +60,6 @@ export default function Sidebar() {
               onClick={() => handleOpen(1)}
               className="border-b-0 p-3"
             >
-              <ListItemPrefix></ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 QR Code color
               </Typography>
@@ -84,7 +89,6 @@ export default function Sidebar() {
               onClick={() => handleOpen(2)}
               className="border-b-0 p-3"
             >
-              <ListItemPrefix></ListItemPrefix>
               <Typography
                 color="blue-gray"
                 className="mr-auto font-normal mt-auto"
@@ -117,7 +121,6 @@ export default function Sidebar() {
               onClick={() => handleOpen(3)}
               className="border-b-0 p-3"
             >
-              <ListItemPrefix></ListItemPrefix>
               <Typography
                 color="blue-gray"
                 className="mr-auto font-normal mt-auto"

@@ -1,4 +1,0 @@
-This is a Brave Creators publisher verification file.
-
-Domain: qrazy-genie.vercel.app
-Token: 7fd97ff3ac07011f5a1d1de274a26365f5993272f397ca855e8dba7c58f344c5

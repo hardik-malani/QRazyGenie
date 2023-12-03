@@ -5,13 +5,13 @@ import { useDispatch,useSelector } from 'react-redux';
 
 export default function Qr({link}) {
   const qrRef = useRef(null);
-  const bgColorQr = "white";
-  const Store = useSelector((state) => state.linkValue)
+  const bgColorQr = "#000000";
+  const input = useSelector((state) => state.linkValue)
+  const qrcolor = useSelector((state) => state.frcolor)
 
   useEffect(()=>{
-    console.log(Store)
-  })
-
+    console.log(qrcolor.name)
+})
 
   const downloadQR = () => {
     if (qrRef.current) {
@@ -32,12 +32,12 @@ export default function Qr({link}) {
       <div ref={qrRef} className="w-auto self-center ">
         <span></span>
       <QRCode
-        value={Store.name}
+        value={input.name}
+        fgColor={qrcolor.name.hex}
         bgColor={bgColorQr}
         quietZone={10}
         size={200}
-        fgColor="green"
-        logoImage="/github.png"
+        // logoImage="/github.png"
         logoWidth="100"
         logoOpacity="0.4"
         qrStyle="dots"
