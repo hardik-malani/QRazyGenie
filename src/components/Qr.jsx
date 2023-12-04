@@ -3,14 +3,14 @@ import { QRCode } from "react-qrcode-logo";
 import html2canvas from "html2canvas";
 import { useDispatch,useSelector } from 'react-redux';
 
-export default function Qr({link}) {
+export default function Qr() {
   const qrRef = useRef(null);
-  const bgColorQr = "#000000";
   const input = useSelector((state) => state.linkValue)
-  const qrcolor = useSelector((state) => state.frcolor.name?.hex || "#000000")
+  const qrColor = useSelector((state) => state.frcolor.name?.hex || "#000000")
+  const bgColor = useSelector((state) => state.Bgcolor.name?.hex || "#000000")
 
   useEffect(()=>{
-    console.log(qrcolor)
+    console.log(qrColor)
 })
 
   const downloadQR = () => {
@@ -33,8 +33,8 @@ export default function Qr({link}) {
         <span></span>
       <QRCode
         value={input.name}
-        fgColor={qrcolor}
-        bgColor={bgColorQr}
+        fgColor={qrColor}
+        bgColor={bgColor}
         quietZone={10}
         size={200}
         logoImage="/github.png"

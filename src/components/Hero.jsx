@@ -4,7 +4,7 @@ import Qr from './Qr';
 import { FaGreaterThan } from 'react-icons/fa';
 import { setInputValue } from '../redux/reducer/Input';
 
-export default function Hero({link}) {
+export default function Hero() {
   const [inputText, setInputText] = useState('');
   const dispatch = useDispatch();
   // const Store = useSelector((state) => state.linkValue)

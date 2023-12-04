@@ -14,13 +14,14 @@ import { ChevronDownIcon } from "@heroicons/react/outline";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
 import { setFrColor } from "../redux/reducer/QrColor";
+import { setBgColor } from "../redux/reducer/BgColor";
 
 
 export default function Sidebar() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(0);
-  const [qrcolor, setQrColor] = useColor("#123123");
-  const [bgcolor, setBgColor] = useColor("#123123");
+  const [qrcolor, setQrColor] = useColor("#FFFFFF");
+  const [bcolor, setBColor] = useColor("#000000");
   
   const [selectedShape, setSelectedShape] = useState('circle');
 
@@ -34,6 +35,7 @@ export default function Sidebar() {
 
   useEffect(()=>{
       dispatch(setFrColor(qrcolor))
+      dispatch(setBgColor(bcolor))
   })
 
   return (
@@ -100,8 +102,8 @@ export default function Sidebar() {
           {open === 2 && (
             <ColorPicker
               hideInput={["rgb", "hsv"]}
-              color={qrcolor}
-              onChange={setQrColor}
+              color={bcolor}
+              onChange={setBColor}
             />
           )}
         </Accordion>
