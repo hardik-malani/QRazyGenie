@@ -1,16 +1,20 @@
 import React, { useEffect, useRef} from "react";
 import { QRCode } from "react-qrcode-logo";
 import html2canvas from "html2canvas";
-import { useDispatch,useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export default function Qr() {
   const qrRef = useRef(null);
-  const input = useSelector((state) => state.linkValue)
+  const input = useSelector((state) => state.linkValue.name)
   const qrColor = useSelector((state) => state.frcolor.name?.hex || "#000000")
   const bgColor = useSelector((state) => state.Bgcolor.name?.hex || "#000000")
+  const logo = useSelector((state) => state.UploadLogo.uploadedPictures)
+
+  const downloadName = input + ".png" ;
 
   useEffect(()=>{
     console.log(qrColor)
+    console.log(logo)
 })
 
   const downloadQR = () => {
@@ -20,7 +24,7 @@ export default function Qr() {
           .toDataURL("image/png")
           .replace("image/png", "image/octet-stream");
         const link = document.createElement("a");
-        link.download = "qr-code.png";
+        link.download = downloadName;
         link.href = qrImage;
         link.click();
       });
@@ -29,17 +33,17 @@ export default function Qr() {
 
   return (
     <div className="flex flex-col">
-      <div ref={qrRef} className="w-auto self-center ">
+      <div ref={qrRef} className="w-auto self-center">
         <span></span>
       <QRCode
-        value={input.name}
+        value={input}
         fgColor={qrColor}
         bgColor={bgColor}
         quietZone={10}
         size={200}
-        logoImage="/github.png"
+        logoImage={logo.length > 0 ? URL.createObjectURL(logo[0]) : null}
         logoWidth="100"
-        logoOpacity="0.4"
+        logoOpacity="0.5"
         qrStyle="dots"
       />
       </div>

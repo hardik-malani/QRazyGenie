@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch,useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Qr from './Qr';
 import { FaGreaterThan } from 'react-icons/fa';
 import { setInputValue } from '../redux/reducer/Input';
