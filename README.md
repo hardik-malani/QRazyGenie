@@ -12,8 +12,8 @@ QRazyGenie gives you the creative control to make QR codes that match your uniqu
 # Features
 
 - **Custom QR-Code Colour**
+- **Custom Background Colour**
 - **Custom Logo**
-- **Ready-to-use Social Media Icon**
 - **Two QR-Code style to choose from**
 - **Much More...**
 
