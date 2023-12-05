@@ -14,7 +14,8 @@ import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
 import { setFrColor } from "../redux/reducer/QrColor";
 import { setBgColor } from "../redux/reducer/BgColor";
-import { clearUploadedImages, setUploadedPicture } from "../redux/reducer/UploadLogo";
+import { setUploadedPicture } from "../redux/reducer/UploadLogo";
+import { setShape } from "../redux/reducer/shape";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
@@ -23,7 +24,6 @@ export default function Sidebar() {
   const [bcolor, setBColor] = useColor("#000000");
 
   const [selectedShape, setSelectedShape] = useState("circle");
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -31,6 +31,7 @@ export default function Sidebar() {
 
   const handleShapeChange = (shape) => {
     setSelectedShape(shape);
+    dispatch(setShape(shape));
   };
 
   const handleLogoChange = (event) => {
@@ -203,12 +204,11 @@ export default function Sidebar() {
           </ListItem>
           {open === 4 && (
             <ListItemPrefix className="ml-5">
-              {/* Add the circle and square checkboxes */}
               <label className="inline-flex items-center mr-5">
                 <input
                   type="checkbox"
-                  checked={selectedShape === "circle"}
-                  onChange={() => handleShapeChange("circle")}
+                  checked={selectedShape === "dots"}
+                  onChange={() => handleShapeChange("dots")}
                   className="h-5 w-5 "
                 />
                 <span className="ml-2 text-white">Circle</span>

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="bg-gray-800 flex flex-col py-3 relative md:top-auto">
+    <footer className="bg-gray-800 flex flex-col py-3 relative md:bottom-0">
       <div className="p-5 h-auto lg:flex md:flex-row space-y-5 md:space-y-0">
         <div>
           <Link to="/">
@@ -57,6 +57,6 @@ export default function Footer() {
         <span className="text-[#ADFF45] hover:text-[#79c635]">Made with Love by Hardik&nbsp;</span>
         <Heart className="md:mt-[3px] md:w-8 md:h-8 text-red-500 hover:text-red-800"/>
       </div>
-    </div>
+    </footer>
   );
 }

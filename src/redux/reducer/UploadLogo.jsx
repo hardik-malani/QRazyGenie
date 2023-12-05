@@ -16,4 +16,4 @@ const pictureUploadSlice = createSlice({
 
 export default pictureUploadSlice.reducer;
 
-export const { setUploadedPicture, clearUploadedImages} = pictureUploadSlice.actions;
+export const { setUploadedPicture} = pictureUploadSlice.actions;

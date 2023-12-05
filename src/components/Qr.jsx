@@ -9,12 +9,14 @@ export default function Qr() {
   const qrColor = useSelector((state) => state.frcolor.name?.hex || "#000000")
   const bgColor = useSelector((state) => state.Bgcolor.name?.hex || "#000000")
   const logo = useSelector((state) => state.UploadLogo.uploadedPictures)
+  const shape = useSelector((state) => state.shape.name)
 
   const downloadName = input + ".png" ;
 
   useEffect(()=>{
     console.log(qrColor)
     console.log(logo)
+    console.log(shape)
 })
 
   const downloadQR = () => {
@@ -44,7 +46,7 @@ export default function Qr() {
         logoImage={logo.length > 0 ? URL.createObjectURL(logo[0]) : null}
         logoWidth="100"
         logoOpacity="0.5"
-        qrStyle="dots"
+        qrStyle={shape}
       />
       </div>
       <button
