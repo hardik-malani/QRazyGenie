@@ -13,11 +13,12 @@ export default function Qr() {
 
   const downloadName = input + ".png" ;
 
-  useEffect(()=>{
-    console.log(qrColor)
-    console.log(logo)
-    console.log(shape)
-})
+  //Debugging
+//   useEffect(()=>{
+//     console.log(qrColor)
+//     console.log(logo)
+//     console.log(shape)
+// })
 
   const downloadQR = () => {
     if (qrRef.current) {

@@ -23,7 +23,7 @@ export default function Sidebar() {
   const [qrcolor, setQrColor] = useColor("#FFFFFF");
   const [bcolor, setBColor] = useColor("#000000");
 
-  const [selectedShape, setSelectedShape] = useState("circle");
+  const [selectedShape, setSelectedShape] = useState("dots");
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -46,7 +46,7 @@ export default function Sidebar() {
   });
 
   return (
-    <Card className="h-[100vh] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block bg-black text-red-500 rounded-none">
+    <Card className="h-auto w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden md:block bg-black text-red-500 rounded-none">
       <div className="mb-2 p-4">
         <Typography variant="h5" color="blue-gray" className="text-3xl">
           Customize

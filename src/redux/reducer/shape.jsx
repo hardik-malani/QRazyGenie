@@ -2,11 +2,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  shape: '',
+  shape: 'dots',
 };
 
 const inputSlice = createSlice({
-  name: 'shape',
+  name: 'dots',
   initialState,
   reducers: {
     setShape: (state, action) => {
