@@ -28,7 +28,15 @@ First, you need to clone the repository
 git clone https://github.com/hardik-malani/QRazyGenie.git
 ```
 
-2. Install Dependencies
+2. Change Path
+
+Change to the cloned repository folder
+
+```
+cd QRazyGenie
+```
+
+3. Install Dependencies
 
 Install the project's dependencies:
 
@@ -36,7 +44,7 @@ Install the project's dependencies:
 npm i
 ```
 
-3. Start the Project
+4. Start the Project
 
 Once all the dependencies are installed, you can start the project:
 
