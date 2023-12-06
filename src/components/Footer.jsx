@@ -15,7 +15,7 @@ export default function Footer() {
         <div>
           <Link to="/">
           <p className="text-4xl bg-gradient-to-r from-green-300 via-blue-400 to-purple-600 bg-clip-text text-transparent Cheese">
-            QRazy-Genie
+            qRazy-Genie
           </p>
           </Link>
           <p className="text-white font-mono italic md:w-[60%]">
