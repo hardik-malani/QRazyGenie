@@ -23,7 +23,7 @@ export default function Sidebar() {
   const [qrcolor, setQrColor] = useColor("#FFFFFF");
   const [bcolor, setBColor] = useColor("#000000");
 
-  const [selectedShape, setSelectedShape] = useState("dots");
+  const [selectedShape, setSelectedShape] = useState("square");
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
